@@ -17,7 +17,8 @@ def create_project_hash
   ugly_projects = kickstarter.css("li.project.grid_4")
   
   ugly_projects.each do |project|
-    projects[project] = {}
+    title = project.css("h2.bbcard_name strong a").text
+    project[title.to_sym] = {}
   end
   projects
 end
