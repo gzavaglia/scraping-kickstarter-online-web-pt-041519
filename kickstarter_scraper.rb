@@ -8,4 +8,4 @@ def create_project_hash
   binding.pry
 end
 
-Kick.create_project_hash
+create_project_hash
